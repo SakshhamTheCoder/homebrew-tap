@@ -14,22 +14,28 @@ cask "adbt" do
   on_macos do
     on_intel do
       url "https://github.com/SakshhamTheCoder/adbt/releases/download/v#{version}/adbt_Darwin_x86_64.tar.gz"
-      sha256 "f07380f5d07b3ecd70a16b4bd1112dfe88c277024f27f7d1203c1c2eb808f110"
+      sha256 "93bd3efefd0eb6d21903929d7cb04bc2f26eb3c8c452b72cec07f1568218e1c9"
     end
     on_arm do
       url "https://github.com/SakshhamTheCoder/adbt/releases/download/v#{version}/adbt_Darwin_arm64.tar.gz"
-      sha256 "6d23db17bfa0405550ac63d2e551f2c826f928951a5c906612728c7813341e4f"
+      sha256 "a9ed52de35570e2965230e28599f997260f2020e90f0621ba99b5f948176498b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/SakshhamTheCoder/adbt/releases/download/v#{version}/adbt_Linux_x86_64.tar.gz"
-      sha256 "769e4fb9d761258f99aaee62ce4658b874f9c32123078b4cb1510bf78439d09c"
+      sha256 "1a5fb88becf30525c6109d70e21072cf87c93b92aea8cf93b9644baf4b76844b"
     end
     on_arm do
       url "https://github.com/SakshhamTheCoder/adbt/releases/download/v#{version}/adbt_Linux_arm64.tar.gz"
-      sha256 "c7de49addf09e37671daeede836eb72257c1c98526b6e76f82510cf25e3cad8d"
+      sha256 "ec8ccb8089019328e563028fbdb103e5ed0a44d7b0ba32fa30f17fb007fa0434"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/adbt"]
     end
   end
 
