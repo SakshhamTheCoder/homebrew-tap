@@ -14,22 +14,22 @@ cask "adbt" do
   on_macos do
     on_intel do
       url "https://github.com/SakshhamTheCoder/adbt/releases/download/v#{version}/adbt_Darwin_x86_64.tar.gz"
-      sha256 "8953746fec6f5b37ae01cc8d8a3275569088f10645fe5318e5d03b21f80b49ad"
+      sha256 "9fafebdc4abb032a6947100d5e8627cb3eda02e3439f04eafe780519f8558ffc"
     end
     on_arm do
       url "https://github.com/SakshhamTheCoder/adbt/releases/download/v#{version}/adbt_Darwin_arm64.tar.gz"
-      sha256 "52731d8d09c3abd5487e47cd3b5af12089b94fd5319cecdfe2da0a594ed5126b"
+      sha256 "f3a0628cdbf30e6f0a9aa56fa8a311bf4b0c0d918e1e2633d783355bad0e863c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/SakshhamTheCoder/adbt/releases/download/v#{version}/adbt_Linux_x86_64.tar.gz"
-      sha256 "8c3286c69a8c9b3cfdf6d69a72da945fe2e35d2faa2a00827b90a102b146bab4"
+      sha256 "5377eaed2e0c8ce18227e40b1326eaf1a0283364fe9599a8d708653815bc6cb7"
     end
     on_arm do
       url "https://github.com/SakshhamTheCoder/adbt/releases/download/v#{version}/adbt_Linux_arm64.tar.gz"
-      sha256 "bf6b6a6a2090b21f708f10fe733289ffa8ca740f59c66271f9cab42ba5d399ea"
+      sha256 "b2a5ec4dd9c22f22049d752c4825cee3e255b2c01962a9cff8d0c7cb546edd9b"
     end
   end
 
